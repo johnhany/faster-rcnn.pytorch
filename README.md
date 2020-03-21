@@ -1,5 +1,27 @@
 # A *Faster* Pytorch Implementation of Faster R-CNN
 
+## Changes against origin repo
+
+1. Make `pytroch-1.0` branch the `master` branch
+
+2. Replaced `scipy.misc.imread` with `imageio.imread`
+
+3. Some path-related changes to avoid using symlinks
+
+4. switch 2-space indent to 4-space indent
+
+5. Steps to train on Pascal VOC or COCO:
+
+    - `cd data && git clone https://github.com/cocodataset/cocoapi.git && cd cocoapi/PythonAPI && make`
+
+    - Download minival and valminuscapval annotations from [http://datasets.d2.mpi-inf.mpg.de/hosang17cvpr/coco_minival2014.tar.gz](http://datasets.d2.mpi-inf.mpg.de/hosang17cvpr/coco_minival2014.tar.gz)
+
+    - Change `self.model_path` in `lib/model/faster_rcnn/resnet.py`
+
+    - Change `__C.DATA_DIR` in `lib/model/utils/config.py`
+
+    - All the other steps below
+
 ## Introduction
 
 ### Good news! This repo supports pytorch-1.0 now!!! We borrowed some code and techniques from [maskrcnn-benchmark](https://github.com/facebookresearch/maskrcnn-benchmark).
