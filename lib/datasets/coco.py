@@ -103,7 +103,7 @@ class coco(imdb):
     #   images/train2014/COCO_train2014_000000119993.jpg
     file_name = ('COCO_' + self._data_name + '_' +
                  str(index).zfill(12) + '.jpg')
-    image_path = osp.join(self._data_path, 'images',
+    image_path = osp.join(self._data_path,
                           self._data_name, file_name)
     assert osp.exists(image_path), \
       'Path does not exist: {}'.format(image_path)
