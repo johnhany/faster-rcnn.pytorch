@@ -80,7 +80,7 @@ def _smooth_l1_loss(bbox_pred, bbox_targets, bbox_inside_weights, bbox_outside_w
     out_loss_box = bbox_outside_weights * in_loss_box
     loss_box = out_loss_box
     for i in sorted(dim, reverse=True):
-      loss_box = loss_box.sum(i)
+        loss_box = loss_box.sum(i)
     loss_box = loss_box.mean()
     return loss_box
 

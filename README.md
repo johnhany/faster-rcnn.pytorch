@@ -8,7 +8,7 @@
 
 3. Some path-related changes to avoid using symlinks
 
-4. switch 2-space indent to 4-space indent
+4. Switch 2-space indent to 4-space indent
 
 5. Steps to train on Pascal VOC or COCO:
 
@@ -21,6 +21,12 @@
     - Change `__C.DATA_DIR` in `lib/model/utils/config.py`
 
     - All the other steps below
+
+Command to train:
+
+```
+python trainval_net.py --dataset pascal_voc --net res101 --bs 4 --nw 8 --lr 4e-3 --lr_decay_step 8 --epochs 10 --cuda
+```
 
 ## Introduction
 
