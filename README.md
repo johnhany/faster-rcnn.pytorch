@@ -1,5 +1,9 @@
 # A *Faster* Pytorch Implementation of Faster R-CNN
 
+## 代码解读
+
+[《图解Faster-RCNN的PyTorch实现》](http://johnhany.net/2020/04/faster-rcnn-code-reading/)
+
 ## Changes against origin repo
 
 1. Make `pytroch-1.0` branch the `master` branch
